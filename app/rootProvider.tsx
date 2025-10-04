@@ -2,7 +2,6 @@
 import { ReactNode, useState } from "react";
 import { base } from "wagmi/chains";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
-import "@coinbase/onchainkit/styles.css";
 import { State, WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { getConfig } from "./wagmi";

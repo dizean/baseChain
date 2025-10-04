@@ -7,9 +7,7 @@ export function getConfig() {
     chains: [base, baseSepolia],
     connectors: [
       coinbaseWallet({
-        appName: 'My OnchainKit App',
-        preference: 'smartWalletOnly',
-        version: '4',
+        appName: 'My OnchainKit App', 
       }),
       metaMask(), 
     ],
