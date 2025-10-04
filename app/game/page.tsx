@@ -91,8 +91,12 @@ export default function Game() {
         args: [address, rewardAmount],
       });
       setStatus("✅ Reward sent! 🎁");
-    } catch (e: any) {
-      setStatus(`❌ Reward failed: ${e?.message || e}`);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        setStatus(`❌ Reward failed: ${e.message}`);
+      } else {
+        setStatus(`❌ Reward failed: ${String(e)}`);
+      }
     } finally {
       setRewardPending(false);
     }
@@ -241,4 +245,4 @@ export default function Game() {
   );
 }
 // git config --global user.email "you@example.com"
-  // git config --global user.name "Your Name"
+// git config --global user.name "Your Name"
