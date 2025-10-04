@@ -15,7 +15,7 @@ export default function Game() {
   const { address, isConnected } = useAccount();
   const { connect } = useConnect();
   const { disconnect } = useDisconnect();
-  const { writeContract, isLoading: txPending } = useWriteContract();
+  const { writeContract } = useWriteContract();
 
   const [packChoice, setPackChoice] = useState<3 | 5 | 8>(3);
   const [status, setStatus] = useState("");
